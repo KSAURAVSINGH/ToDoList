@@ -59,17 +59,16 @@ app.route("/remove/:id")
 });
 
 
-
-
 app.use("/static",express.static("public"));
 
-
-//connection to mongodb
+// connection to mongodb
 mongoose.connect(process.env.DB_CONNECT,{
     useNewUrlParser: true,
-},()=>{
+},(err)=>{
+    if(err)
+        console.log(err);
     console.log("Connected to Mongo DB");
-    app.listen(3000, () => console.log("Server Up and running again"));
+    app.listen(8000, () => console.log("Server Up and running again"));
 });
 
 
