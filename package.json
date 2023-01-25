@@ -4,7 +4,8 @@
   "description": "A web app that keeps track of tasks needs to be done",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "author": "Kumar Saurav",
   "license": "ISC",
